@@ -1,24 +1,44 @@
-# sample_vue
+# レポジトリの府k製方法
 
-## Project setup
-```
-yarn install
-```
+このリポジトリの内容を複製して、新たなリポジトリを作成する方法です。
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 手順
 
-### Compiles and minifies for production
-```
-yarn build
-```
+1. github に新しいリポジトリを作成します。
 
-### Lints and fixes files
+以下では、新しいレポジトリの名前を new_project としたとします。
+
+2. このリポジトリのベアクローンを作成します。
+
 ```
-yarn lint
+$ git clone --bare git@github.com:royalcrab/vue3-vuetify3-template.git
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+3. 新しいリポジトリにミラープッシュします。
+
+```
+$ cd vue3-vuetify3-template
+$ git push --mirror git@github.com:yourname/new_project.git
+```
+
+4. クローンしたローカルリポジトリを削除します。
+
+```
+$ cd ..
+$ rm -rf vue3-vuetify3-template
+```
+
+5. new_project 内で yarn します。
+
+```
+$ cd new_project
+$ yarn
+```
+
+6. 起動テスト
+
+```
+$ yarn dev
+```
+
+ブラウザで http://localhost:3000 を開いて、ページが表示されたらOKです。
