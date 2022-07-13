@@ -25,14 +25,14 @@ $ git push --mirror git@github.com:yourname/new_project.git
 
 ```
 $ cd ..
-$ rm -rf vue3-vuetify3-template
+$ rm -rf vue3-vuetify3-template.git
 ```
 
-5. new_project 内で yarn します。
+5. あらためて、新しいレポジトリを clone します。
 
 ```
+$ git clone git@github.com:yourname/new_project.git
 $ cd new_project
-$ yarn
 ```
 
 6. 起動テスト
