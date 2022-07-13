@@ -38,6 +38,7 @@ $ cd new_project
 6. 起動テスト
 
 ```
+$ yarn install
 $ yarn dev
 ```
 
