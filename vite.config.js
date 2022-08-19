@@ -13,6 +13,11 @@ export default defineConfig({
       autoImport: true,
     }),
   ],
+  server: {
+    watch: {
+      usePolling: true
+    }
+  },
   define: { 'process.env': {} },
   resolve: {
     alias: {
